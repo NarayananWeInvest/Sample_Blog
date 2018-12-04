@@ -1,0 +1,22 @@
+<h1> List of articles </h1>
+
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Author</th>
+		<th>Text</th>
+		<th>Time-created</th>
+	</tr>
+
+	<% @article.each do |article| %>
+	<tr>
+		<td><%= article.title %></td>
+		<td><%= article.author %></td>
+		<td><%= article.text %></td>
+		<td><%= article.created_at %></td>
+		<td><%= link_to 'show', article_path(article) %></td>
+		<td><%= link_to 'edit', edit_article_path(article) %></td>
+		<td> <%= link_to 'destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure?'}%>
+	</tr>
+	<% end %>
+</table>
