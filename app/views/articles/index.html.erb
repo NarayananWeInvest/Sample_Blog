@@ -5,6 +5,7 @@
 		<th>Title</th>
 		<th>Author</th>
 		<th>Text</th>
+		<th>Is Checked </th>t
 		<th>Time-created</th>
 	</tr>
 
@@ -13,6 +14,7 @@
 		<td><%= article.title %></td>
 		<td><%= article.author %></td>
 		<td><%= article.text %></td>
+		<td><%= article.validated %></td>
 		<td><%= article.created_at %></td>
 		<td><%= link_to 'show', article_path(article) %></td>
 		<td><%= link_to 'edit', edit_article_path(article) %></td>

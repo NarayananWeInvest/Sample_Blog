@@ -4,8 +4,10 @@ one:
   title: MyString
   author: MyString
   text: MyText
+  validated: false
 
 two:
   title: MyString
   author: MyString
   text: MyText
+  validated: false

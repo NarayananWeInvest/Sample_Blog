@@ -5,11 +5,12 @@ class ArticlesController < ApplicationController
 	end
 
     def create
-    	@article = Article.new(params.require(:article).permit(:title,:author,:text))
-    	binding.pry
+    	@article = Article.new(params.require(:article).permit(:title,:author,:text,:validated))
+    	#binding.pry
     	if @article.save
     		redirect_to @article
   		else
+  			@article.save!
   			render :action => 'new'
   		end
     end
